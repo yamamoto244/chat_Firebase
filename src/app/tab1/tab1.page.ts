@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-
-class Comment {
-  name: string;
-  message: string;
-}
+import { Comment } from '../class/comment';
 
 const COMMENTS: Comment[] = [
   { name: '山本 剛史', message: 'お疲れ様です！' },
@@ -18,10 +13,14 @@ const COMMENTS: Comment[] = [
 })
 export class Tab1Page {
   comments = COMMENTS;
+  content = '';
 
 
-  onClickedSend(){
-      // console.log(index);
-
-}
+  addComment(comment: string): void {
+    // console.log(index);
+    if (comment) {
+      this.comments.push(new Comment('山本 剛史', comment));
+    }
+    this.content = '';
+  }
 }

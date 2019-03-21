@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      tyotto
+      chat
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -36,8 +36,8 @@
 
       <!-- テキストボックス、送信ボタン④ -->
       <div id="bms_send">
-        <!-- <textarea name="message" required [(ngModel)]="message" id="bms_send_message"></textarea> -->
-        <div id="bms_send_btn" (click)="onClickedSend()">送信</div>
+        <textarea required [(ngModel)]="content" name="content" id="bms_send_message"></textarea>
+        <div id="bms_send_btn" (click)="addComment(content)">送信</div>
       </div>
     </div>
 </ion-content>

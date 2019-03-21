@@ -9,7 +9,7 @@
 /* タイムライン部分③ */
 #bms_messages {
   overflow: auto;/* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
-  height:100%;/*テキストエリアが下に張り付く様にする*/
+  height:92%;/*テキストエリアが下に張り付く様にする*/
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   background-color: #eee;
