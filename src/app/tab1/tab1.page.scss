@@ -22,6 +22,8 @@
   font-size: 16px;
   word-wrap: break-word;/* 吹き出し内で自動で改行 */
   white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+  margin-top: 20px;
+  margin-bottom:10px;
 }
 /* メッセージ１（左側） */
 .bms_left {
