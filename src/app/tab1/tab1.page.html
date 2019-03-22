@@ -8,36 +8,41 @@
 
 <ion-content>
   <div id="your_container">
-     <!-- タイムライン部分③ -->
-      <div id="bms_messages">
+    <!-- タイムライン部分③ -->
+    <div id="bms_messages">
 
-        <!--メッセージ１（左側）-->
-        <div class="bms_message bms_left">
+      <!--メッセージ１（左側）-->
+      <ng-container *ngFor="let comment of comments" >
+        <div class="bms_message bms_left" *ngIf="comment.user.uid !== currentUser.uid">
           <div class="bms_message_box">
             <div class="bms_message_content">
-              <div class="bms_message_text">おつかれさまです!</div>
-            </div>
-          </div>
-        </div>
-        <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
-
-        <!--メッセージ２（右側）-->
-        <ng-container *ngFor="let comment of comments">
-        <div class="bms_message bms_right">
-          <div class="bms_message_box">
-            <div class="bms_message_content">
+              <small class="date">{{ comment.date| commentDate }}</small>
               <div class="bms_message_text">{{ comment.message }}</div>
             </div>
           </div>
         </div>
         <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
       </ng-container>
-      </div>
 
-      <!-- テキストボックス、送信ボタン④ -->
-      <div id="bms_send">
-        <textarea required [(ngModel)]="content" name="content" id="bms_send_message"></textarea>
-        <div id="bms_send_btn" (click)="addComment(content)">送信</div>
-      </div>
+      <!--メッセージ２（右側）-->
+      <ng-container *ngFor="let comment of comments" >
+        <div class="bms_message bms_right" *ngIf="comment.user.uid === currentUser.uid">
+          <div class="bms_message_box">
+            <div class="bms_message_content">
+              <small class="date">{{ comment.date| commentDate }}</small>
+              <div class="bms_message_text">{{ comment.message }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
+      </ng-container>
+
     </div>
+
+    <!-- テキストボックス、送信ボタン④ -->
+    <div id="bms_send">
+      <textarea required [(ngModel)]="content" name="content" id="bms_send_message"></textarea>
+      <div id="bms_send_btn" (click)="addComment(content)">送信</div>
+    </div>
+  </div>
 </ion-content>
