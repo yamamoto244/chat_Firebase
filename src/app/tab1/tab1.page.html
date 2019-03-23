@@ -25,7 +25,7 @@
       </ng-container>
 
       <!--メッセージ２（右側）-->
-      <ng-container *ngFor="let comment of comments" >
+      <ng-container *ngFor="let comment of comments | async" >
         <div class="bms_message bms_right" *ngIf="comment.user.uid === currentUser.uid">
           <div class="bms_message_box">
             <div class="bms_message_content">
@@ -36,6 +36,15 @@
         </div>
         <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
       </ng-container>
+
+      <div class="bms_message bms_right">
+        <div class="bms_message_box">
+          <div class="bms_message_content">
+            <div class="bms_message_text">{{ (item | async)?.message }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
 
     </div>
 
