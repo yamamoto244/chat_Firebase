@@ -25,25 +25,28 @@
       </ng-container>
 
       <!--メッセージ２（右側）-->
-      <ng-container *ngFor="let comment of comments | async" >
+      <ng-container *ngFor="let comment of comments; let i = index" >
         <div class="bms_message bms_right" *ngIf="comment.user.uid === currentUser.uid">
           <div class="bms_message_box">
             <div class="bms_message_content">
               <small class="date">{{ comment.date| commentDate }}</small>
               <div class="bms_message_text">{{ comment.message }}</div>
+              <ng-container *ngIf="comment.user.uid === currentUser.uid">
+                <small class="date" (click)="deleteComment(comment.key)">削除</small>
+              </ng-container>
             </div>
           </div>
         </div>
         <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
       </ng-container>
 
-      <div class="bms_message bms_right">
-        <div class="bms_message_box">
-          <div class="bms_message_content">
-            <div class="bms_message_text">{{ (item | async)?.message }}</div>
-          </div>
-        </div>
-      </div>
+      <!--<div class="bms_message bms_right">-->
+        <!--<div class="bms_message_box">-->
+          <!--<div class="bms_message_content">-->
+            <!--<div class="bms_message_text">{{ (item | async)?.message }}</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
       <div class="bms_clear"></div><!-- 回り込みを解除（スタイルはcssで充てる） -->
 
     </div>

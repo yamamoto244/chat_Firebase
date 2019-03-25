@@ -5,10 +5,13 @@ export class Comment {
   user: User;
   message: string;
   date: string;
+  key?: string;
+  isEdit: boolean;
 
-  constructor(user: User, message: string) {
-    this.user = user;
-    this.message = message;
-    this.date = format(new Date());
+  constructor(values: any) {
+    this.user = values.user;
+    this.message = values.message;
+    this.date = values.date || (new Date());
+    if (values.key) { this.key = values.key; }
   }
 }

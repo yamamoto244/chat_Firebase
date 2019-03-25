@@ -1,20 +1,84 @@
+<ion-menu side="start" menuId="first" content-id="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>田中　太郎</ion-item>
+      <ion-item>田中　一郎</ion-item>
+      <ion-item>田中　三郎</ion-item>
+      <ion-item>アフロ 田中</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      tyotto
+      Library
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="welcome">
-    <div class="jumbotron jumbotron-fluid p-5 border border-secondary bg-light">
-      <div class="container">
-        <h1 class="display-3">⭐tyotto chatへようこそ⭐</h1>
-        <p class="w-100">
-          新規登録、またはログインして始めましょう！
-        </p>
-      </div>
-    </div>
-  </div>
+<!--<ion-content>-->
+  <!--<div class="welcome">-->
+    <!--<div class="jumbotron jumbotron-fluid p-5 border border-secondary bg-light">-->
+      <!--<div class="container">-->
+        <!--<h1 class="display-3">⭐tyotto chatへようこそ⭐</h1>-->
+        <!--<p class="w-100">-->
+          <!--新規登録、またはログインして始めましょう！-->
+        <!--</p>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</ion-content>-->
+
+<ion-content id="content">
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>選好判断</ion-card-subtitle>
+    <ion-card-title>単純接触効果</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    事前に繰り返し接触することで、接触した対象の好意度が上昇することを「単純接触効果」と言います。 単純接触効果の研究としては1968年のZajoncの論文[1]が有名です。
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-icon name="pin" slot="start"></ion-icon>
+    <ion-label>Psychology Hacker Team</ion-label>
+    <ion-button (click)="openFirst()" fill="outline" slot="end">Member</ion-button>
+  </ion-item>
+
+  <ion-card-content>
+    心理学を使って、生活をより良くするために活動している怪しい集団
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+    <ion-icon name="baseball" slot="start"></ion-icon>
+    <ion-label>イチローの名言集</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="wine" slot="start"></ion-icon>
+    <ion-label>【イタリアン１０選】美味しいワインがある</ion-label>
+  </ion-item>
+
+  <ion-item class="activated">
+    <ion-icon name="warning" slot="start"></ion-icon>
+    <ion-label>その勉強法は危ない！これに当てはまったら注意！</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="walk" slot="start"></ion-icon>
+    <ion-label>朝の5分で幸せになれる方法とは？！</ion-label>
+  </ion-item>
+</ion-card>
 </ion-content>
