@@ -7,3 +7,7 @@
 .rounded-circle { border-radius: 50%; }
 
 .title { width: 100px; }
+
+//ログアウトボタン
+.btn_container { margin-bottom: 20px;display: flex;justify-content: space-around; }
+.btn {  display: inline-block;padding: 8px 5px;background: #003C8F;/*ボタン色*/color: #FFF;text-align:center;width: 100px;border-radius: 10px; }
