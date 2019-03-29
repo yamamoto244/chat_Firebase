@@ -1,0 +1,46 @@
+// レイアウト
+$sidePadding: 20px;
+
+// 枠線
+$borderRadius: 10px;
+
+// フォントサイズ
+$largeFontSize: 17px;
+$baseFontSize: 14px;
+$smallFontSize: 13px;
+
+// フォントカラー
+$borderColor: #EBEBEB;
+$baseFontColor: #333;
+$lightFontColor: #A0A0A0;
+
+// その他文字
+$baseLineHeight: 1.4;
+
+.wrapper { padding: $sidePadding 0; }
+
+  .formGroup { background: #fff; }
+  .formGroup.margin { margin-bottom: 20px; }
+  .formGroup.padding { padding: 0 $sidePadding; }
+  .formGroup.noBackgroundColor { background: transparent; }
+  .formItem { align-items: center;display: flex;padding-left: $sidePadding; }
+  .formItem.border { border-bottom: 1px solid $borderColor; }
+  .formLabel { color: $lightFontColor;font-size: $smallFontSize;margin-right: 10px;width: 110px; }
+  .formContent { border-bottom: 1px solid $borderColor;color: $baseFontColor;flex: 1;font-size: $largeFontSize; }
+  .formContent.noBorder { border-bottom: 0; }
+  .formItem:last-child .formContent { border-bottom: 0; }
+
+  .formCaption { color: $baseFontColor;font-size: $baseFontSize;margin-bottom: 5px;padding: 0 $sidePadding; }
+
+  .formControl { border: 0;border-radius: 0;color: $baseFontColor;font-size: $baseFontSize;line-height: $baseLineHeight;padding: 10px $sidePadding 10px 0;width: 100%;-webkit-appearance: none; }
+  .formControl:focus { outline: 0; }
+
+  .formContent.half {
+    border-bottom: 0;display: flex;padding-bottom: 0;padding-right: 0;
+    .formControl { border-bottom: 1px solid $borderColor;flex: 1;padding-bottom: 10px; }
+    .formControl { margin-right: 10px; }
+    .formControl:last-child { margin-right: 0; }
+  }
+
+  .submitButton { background: #4285F4;border: 0;border-radius: $borderRadius;color: #fff;display: block;font-size: $largeFontSize;padding: 10px 0;text-align: center;width: 100%; }
+

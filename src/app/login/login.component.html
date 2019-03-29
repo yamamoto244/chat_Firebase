@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="wrapper">
+    <div class="form">
+
+      <div class="mainLogoArea">
+        <!--<code-push-switcher>-->
+          <img [src]="'./assets/logo.png'" class="mainLogo">
+        <!--</code-push-switcher>-->
+      </div>
+
+      <!--<div class="errorMessageArea">{{errorMessage}}</div>-->
+
+      <div class="formGroup">
+        <input type="email"
+               class="formControl"
+               placeholder="メールアドレス">
+               <!--(keyup)="onFormInputChanged()"-->
+               <!--[(ngModel)]="email"-->
+      </div>
+
+      <div class="formGroup">
+        <input type="password"
+               class="formControl"
+               placeholder="パスワード">
+               <!--(keyup)="onFormInputChanged()"-->
+               <!--[(ngModel)]="password"-->
+      </div>
+
+      <div class="formGroup">
+        <div class="formSubmit">ログイン</div>
+      </div>
+
+      <div class="formGroup">
+        <div class="registerButton" (click)="onRegisterClicked()">新しく登録する</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

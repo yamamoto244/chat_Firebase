@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar no-border-top>
+    <ion-buttons left showWhen="ios,core">
+      <button ion-button icon-only (click)="onBackButtonClicked()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>新しく登録</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="signup(f)">
+    <div class="wrapper">
+      <!-- 基本情報 -->
+      <div class="formCaption">基本情報</div>
+      <div class="formGroup margin">
+        <!--<div class="formItem">-->
+        <!--<div class="formContent">-->
+        <!--<input type="text" ngModel name="name" class="formControl" placeholder="ユーザ名" required>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <div class="formItem">
+          <div class="formContent">
+            <input type="email" ngModel name="email" class="formControl" placeholder="メールアドレス" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- パスワード -->
+      <div class="formCaption">パスワード（6文字以上）</div>
+      <div class="formGroup margin">
+        <div class="formItem">
+          <div class="formContent">
+            <input type="password" ngModel name="password" class="formControl" placeholder="パスワード" required>
+          </div>
+        </div>
+
+        <div class="formItem">
+          <div class="formContent">
+            <input type="password" ngModel name="confirm_password" class="formControl" placeholder="パスワード確認" required>
+          </div>
+        </div>
+      </div>
+      <!-- 登録ボタン -->
+      <div class="formGroup padding noBackgroundColor">
+        <a class="submitButton" type="submit" >はじめよう</a>
+      </div>
+    </div>
+  </form>
+</ion-content>

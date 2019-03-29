@@ -74,4 +74,24 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** transparent **/
+  .ion-color-transparent {
+    --ion-color-base: #003C8F;
+    --ion-color-base-rgb: 0, 0, 0;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255, 255, 255;
+    --ion-color-shade: #1e2023;
+    --ion-color-tint: #383a3e;
+  }
+
+  /** twitter **/
+  .ion-color-twitter {
+    --ion-color-base: #00aced;
+    --ion-color-base-rgb: 0, 172, 237;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255, 255, 255;
+    --ion-color-shade: #0097d1;
+    --ion-color-tint: #1ab4ef;
+  }
 }
