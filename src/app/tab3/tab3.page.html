@@ -1,10 +1,27 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input name="first" ngModel required #first="ngModel">
-  <input name="last" ngModel>
-  <button>Submit</button>
-</form>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="image"><img src="../../assets/logo.png" class="title"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-<p>First name value: {{ first.value }}</p>
-<p>First name valid: {{ first.valid }}</p>
-<p>Form value: {{ f.value | json }}</p>
-<p>Form valid: {{ f.valid }}</p>
+<ion-content>
+  <div class="page">
+    <section class="container">　
+        <div class="image"><img src="../../assets/icon.png" class="rounded-circle"></div>
+        <div class="form-group">
+          <h5>【名前】</h5>
+          <p>鈴木 敦</p>
+        </div>
+        <div class="form-group">
+          <h5>【ID】</h5>
+          <p>a.suzuki</p>
+        </div>
+        <div class="form-group">
+          <h5>【メールアドレス】</h5>
+          <p>a.suzuki@tyotto.co.jp</p>
+        </div>
+    </section>
+  </div>
+</ion-content>
