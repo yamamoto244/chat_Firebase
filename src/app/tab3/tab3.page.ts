@@ -12,4 +12,10 @@ export class Tab3Page {
     console.log(f.value);  // { first: '', last: '' }
     console.log(f.valid);  // false
   }
+  logOut (){
+    console.log("aaa");
+  }
+  gotoEdit (){
+    console.log("aaa");
+  }
 }
